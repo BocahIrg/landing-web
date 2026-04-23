@@ -1,0 +1,34 @@
+.menu-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.menu-item {
+    width: 30%;
+    background: #17c79e;
+    overflow: hidden;
+    transform: skewX(-15deg); /* bikin jajar genjang */
+    border-radius: 10px;
+}
+
+/* Balikin isi supaya tidak miring */
+.menu-item .content {
+    transform: skewX(15deg);
+    text-align: center;
+}
+
+.menu-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.menu-item h3 {
+    margin: 10px 0 5px;
+}
+
+.menu-item p {
+    font-size: 14px;
+}

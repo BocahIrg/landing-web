@@ -1,0 +1,283 @@
+:root {
+  --primary: #fff7e7;
+  --item: #27231d;
+  --emas: #816b0d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Barlow", sans-serif;
+  color: var(--item);
+  background-color: var(--primary);
+  min-height: 2000px;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background: linear-gradient(
+    to bottom,
+    rgba(39, 35, 29, 1) 0%,
+    rgba(39, 35, 29, 0) 100%
+  );
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+
+  /* Animasi BG */
+  animation: bg-item linear;
+  animation-timeline: scroll();
+  animation-range: 50vh 90vh;
+  animation-fill-mode: forwards;
+}
+@keyframes bg-item {
+  to {
+    background: var(--item);
+  }
+}
+
+.navbar .navbar-logo img {
+  height: 100%;
+  max-height: 70px;
+  width: auto;
+  display: block;
+
+  /* Animasi logo */
+  animation: logo-ilang linear;
+  animation-timeline: scroll();
+  animation-range: 0vh 100vh;
+  animation-fill-mode: forwards;
+  transform-origin: center;
+}
+@keyframes logo-ilang {
+  to {
+    transform: scale(0);
+    opacity: 0;
+    width: 0;
+  }
+}
+
+.navbar .navbar-title {
+    display: block;
+    position: absolute;
+    font-size: 1.4rem;
+    font-weight: 700;
+    opacity: 0.1;
+
+  /* Animasi Title */
+  animation-name: transparansi-title, muncul-title;
+  animation-timing-function: linear, step-end;
+  animation-timeline: scroll(), scroll();
+  animation-range: 50vh 90vh, 0vh 49vh;
+  animation-fill-mode: forwards, forwards;
+}
+@keyframes transparansi-title {
+  to {
+    opacity: 1;
+    color: var(--primary);
+  }
+}
+@keyframes muncul-title {
+  from { transform: scale(0); }
+  to { transform: scale(1); }
+}
+
+.navbar .navbar-title span {
+    color: #e6ba78;
+}
+
+.navbar .navbar-nav {
+  margin-right: 10rem;
+}
+
+.navbar .navbar-nav a {
+  color: var(--primary);
+  display: inline-block;
+  font-size: 1.3rem;
+  margin: 0 1.2rem;
+  text-shadow: 1px 1px 3px rgba(1, 1, 1, 0.5);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid;
+  transform: scaleX(0);
+  transition: 0.1s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+/* Hero Section */
+.hero {
+  color: var(--primary);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(cover.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to top,
+    rgba(255, 247, 231, 1) 0%,
+    rgba(255, 247, 231, 0) 25%
+  );
+}
+
+.hero .konten {
+  z-index: 10;
+  text-align: center;
+  padding: 0 7% 3rem;
+}
+.hero .konten h1 {
+  font-family: "Aladin", system-ui;
+  font-size: 3.5rem;
+  text-shadow: 1px 1px 3px rgba(1, 1, 1, 1);
+}
+
+.hero .konten h1 span {
+  font-family: "Caesar Dressing", system-ui;
+  color: #e6ba78;
+  font-size: 3.2rem;
+}
+
+.hero .konten p {
+  text-shadow: 1px 1px 3px rgba(1, 1, 1, 1);
+  font-size: 1.1rem;
+  mix-blend-mode: difference;
+}
+
+/* About Section */
+.about {
+  padding: 6rem 7% 1.4rem;
+}
+
+.about h2 {
+  text-align: center;
+}
+
+/* Menu Section */
+.menu {
+  padding: 6rem 7% 1.4rem;
+}
+
+.menu h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.7rem;
+}
+
+.menu p {
+  text-align: center;
+  font-size: 1.2rem;
+  max-width: 30rem;
+  margin: auto;
+}
+
+.menu h2.signature {
+  color: var(--emas);
+  text-align: center;
+  font-family: "Dancing Script", cursive;
+  font-size: 2.2rem;
+  margin-top: 3rem;
+}
+
+.menu .sig-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  font-family: "Dancing Script", cursive;
+  padding: 1rem;
+}
+
+.menu .sig-container .sig-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.menu .sig-container .sig-item .sig-image {
+  position: relative;
+  width: 25vw;
+  aspect-ratio: 3/2;
+  border-radius: 0.7rem;
+  overflow: hidden;
+  transform: skewX(-10deg);
+  border: 0.1rem solid var(--emas);
+}
+
+.menu .sig-container .sig-item .sig-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: skewX(10deg) scale(1.12);
+  transition: 0.1s;
+}
+
+.menu .sig-container .sig-item .sig-image img:hover {
+  transform: skew(10deg) scale(1.7);
+}
+
+.menu .sig-container .sig-teks {
+  text-align: center;
+}
+
+.menu .sig-container .sig-teks h3 {
+  color: var(--emas);
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+.menu .reg-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 5rem;
+  gap: 2rem;
+}
+
+.menu .reg-container .reg-item {
+  text-align: center;
+}
+
+.menu .reg-container .reg-item img {
+  width: 15vw;
+  border-radius: 5%;
+  border: 0.1rem solid var(--item);
+}
+
+.menu .reg-container .reg-item .reg-teks {
+  margin: 0.5rem auto 0rem;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
