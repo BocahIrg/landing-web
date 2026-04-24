@@ -19,11 +19,11 @@
   <body>
     <!-- Navbar -->
     <nav class="navbar">
-      <a href="#" class="navbar-logo"><img src="ph.png" alt="" /></a>
+      <a href="#" class="navbar-logo"><img src="images/logo.jpg" alt="" /></a>
       <a href="#" class="navbar-title">warung<span>MAEMUNAH.</span></a>
 
       <div class="navbar-nav">
-        <a href="#home">Home</a>
+        <a href="#">Home</a>
         <a href="#about">About</a>
         <a href="#menu">Menu</a>
         <a href="#reservasi">Reservasi</a>
@@ -42,19 +42,46 @@
     </section>
 
     <!-- About Section -->
-     <section id="about" class="about">
+    <section id="about" class="about">
       <h2>Tentang Kami</h2>
-     </section>
+
+      <div class="row">
+        <div class="container-img">
+          <img src="images/sendok.png" alt="" class="sendok" />
+          <img src="images/garpu.png" alt="" class="garpu" />
+        </div>
+        <div class="konten">
+          <h3>Kenapa Memilih Kami?</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum,
+            maiores quam. Nostrum porro ratione obcaecati odio tenetur magni ab
+            sequi minus nisi? Esse at blanditiis quisquam sit magni dolore
+            libero eveniet numquam est sint. Amet?
+          </p>
+          <br />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum,
+            ullam aperiam? Velit numquam placeat vitae harum eaque explicabo
+            officiis repellat excepturi eius id quibusdam ratione aperiam est,
+            error iusto repudiandae nobis. Similique voluptas numquam ut
+            incidunt nostrum sunt provident unde?
+          </p>
+        </div>
+      </div>
+    </section>
 
     <!-- Menu Section -->
     <section id="menu" class="menu">
       <h2>Menu Tersedia</h2>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus, atque dignissimos vitae ab officia totam!</p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus,
+        atque dignissimos vitae ab officia totam!
+      </p>
       <h2 class="signature">Signature</h2>
       <div class="sig-container">
         <div class="sig-item">
           <div class="sig-image">
-            <img src="ph.png" alt="sig1" />
+            <img src="images/menu/sig1.jpg" alt="sig1" />
           </div>
           <div class="sig-teks">
             <h3>Ayam Klepek - Klepek</h3>
@@ -63,7 +90,7 @@
 
         <div class="sig-item">
           <div class="sig-image">
-            <img src="ph.png" alt="sig2" />
+            <img src="images/menu/sig2.jpg" alt="sig2" />
           </div>
           <div class="sig-teks">
             <h3>Nasi Pedes Munah</h3>
@@ -72,48 +99,124 @@
 
         <div class="sig-item">
           <div class="sig-image">
-            <img src="ph.png" alt="sig3" />
+            <img src="images/menu/sig3.jpg" alt="sig3" />
           </div>
           <div class="sig-teks">
-            <h3>Mie Goreng</h3>
+            <h3>Mie Spesial Bundo</h3>
           </div>
         </div>
       </div>
 
       <div class="reg-container">
         <div class="reg-item">
-          <img src="ph.png" alt="reg1" class="reg-image">
-          <h3 class="reg-teks">Nasi Goreng</h3>
+          <img src="images/menu/reg1.jpg" alt="reg1" class="reg-image" />
+          <h3 class="reg-teks">Gado - Gado</h3>
         </div>
         <div class="reg-item">
-          <img src="ph.png" alt="reg1" class="reg-image">
-          <h3 class="reg-teks">Nasi Goreng</h3>
+          <img src="images/menu/reg2.jpg" alt="reg2" class="reg-image" />
+          <h3 class="reg-teks">Tahu Goreng</h3>
         </div>
         <div class="reg-item">
-          <img src="ph.png" alt="reg1" class="reg-image">
-          <h3 class="reg-teks">Nasi Goreng</h3>
+          <img src="images/menu/reg3.jpg" alt="reg3" class="reg-image" />
+          <h3 class="reg-teks">Ayam Saus Padang</h3>
         </div>
         <div class="reg-item">
-          <img src="ph.png" alt="reg1" class="reg-image">
-          <h3 class="reg-teks">Nasi Goreng</h3>
+          <img src="images/menu/reg4.jpg" alt="reg4" class="reg-image" />
+          <h3 class="reg-teks">Telur Balado</h3>
         </div>
         <div class="reg-item">
-          <img src="ph.png" alt="reg1" class="reg-image">
-          <h3 class="reg-teks">Nasi Goreng</h3>
-        </div>
-        <div class="reg-item">
-          <img src="ph.png" alt="reg1" class="reg-image">
-          <h3 class="reg-teks">Nasi Goreng</h3>
-        </div>
-        <div class="reg-item">
-          <img src="ph.png" alt="reg1" class="reg-image">
-          <h3 class="reg-teks">Nasi Goreng</h3>
-        </div>
-        <div class="reg-item">
-          <img src="ph.png" alt="reg1" class="reg-image">
-          <h3 class="reg-teks">Nasi Goreng</h3>
+          <img src="images/menu/reg5.jpg" alt="reg5" class="reg-image" />
+          <h3 class="reg-teks">Rendang</h3>
         </div>
       </div>
     </section>
+
+    <!-- Reservasi Section -->
+    <section id="reservasi" class="reservasi">
+      <h2>Reservasi</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
+        cumque!
+      </p>
+
+      <div class="container">
+        <form action="#" method="post" class="form-reservasi">
+          <div class="form">
+            <label for="nama">Atas Nama Pemesanan:</label>
+            <input
+              type="text"
+              name="nama"
+              id="nama"
+              placeholder="Nama Lengkap"
+              required
+            />
+          </div>
+
+          <div class="form">
+            <label for="email">Email Pemesanan:</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email"
+              required
+            />
+          </div>
+
+          <div class="form">
+            <label for="telepon">No. Hp/Telp:</label>
+            <input
+              type="tel"
+              name="telepon"
+              id="telepon"
+              placeholder="No. Hp/Telp"
+              required
+            />
+          </div>
+
+          <div class="form-split">
+            <div class="form">
+              <label for="tanggal">Hari/Tanggal:</label>
+              <input type="date" name="tanggal" id="tanggal" required />
+            </div>
+            <div class="form">
+              <label for="waktu">Jam (10:00 - 20:00):</label>
+              <input type="time" name="waktu" id="waktu" required />
+            </div>
+          </div>
+
+          <div class="form">
+            <label for="jumlah-pax">Jumlah Pax:</label>
+            <input
+              type="number"
+              name="jumlah_pax"
+              id="jumlah_pax"
+              min="1"
+              placeholder="Jumlah Pax"
+              required
+            />
+          </div>
+
+          <div class="form">
+            <label for="catatan">Catatan Tambahan:</label>
+            <textarea
+              name="catatan"
+              id="catatan"
+              rows="4"
+              placeholder="Catatan Tambahan (opsional)"
+            ></textarea>
+          </div>
+
+          <div class="form-submit">
+            <button type="submit">Kirim Pemesanan</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2024 Warung Maemunah. All rights reserved.</p>
+    </footer>
   </body>
 </html>
